@@ -46,8 +46,30 @@ file = pd.read_csv('works.csv')
 
 #6
 
-per = np.linspace(.1, 1, 10)
-men = file.query('gender == "Мужской"').quantile(per)
-women = file.query('gender == "Женский"').quantile(per)
-print(men)
-print(women)
+#per = np.linspace(.1, 1, 10)
+#men = file.query('gender == "Мужской"').quantile(per)
+#women = file.query('gender == "Женский"').quantile(per)
+
+#fig1, ax = plt.subplots()
+#ax.plot(per, men)
+#plt.xlabel("Перцентили")
+#plt.ylabel("Зарплата мужчин")
+#plt.show()
+
+#fig2, ax = plt.subplots()
+#ax.plot(per, women)
+#plt.xlabel("Перцентили")
+#plt.ylabel("Зарплата женщин")
+#plt.show()
+
+#7 Нужно вставить эти команды в JupyterNotebook
+
+#file.query("gender == 'Мужской' and educationType == 'Высшее'").hist(bins=100, alpha=0.5)
+#file.query("gender == 'Мужской' and educationType == 'Незаконченное высшее'").hist(bins=100, alpha=0.5)
+#file.query("gender == 'Мужской' and educationType == 'Среднее профессиональное'").hist(bins=100, alpha=0.5)
+#file.query("gender == 'Мужской' and educationType == 'Среднее'").hist(bins=100, alpha=0.5)
+
+#file.query("gender == 'Женский' and educationType == 'Высшее'").hist(bins=100, alpha=0.5)
+#file.query("gender == 'Женский' and educationType == 'Незаконченное высшее'").hist(bins=100, alpha=0.5)
+#file.query("gender == 'Женский' and educationType == 'Среднее профессиональное'").hist(bins=100, alpha=0.5)
+#file.query("gender == 'Женский' and educationType == 'Среднее'").hist(bins=100, alpha=0.5)
