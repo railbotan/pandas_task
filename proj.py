@@ -1,0 +1,25 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as nlp
+
+works = pd.read_csv('works.csv')
+# print(works.head(10))
+# print()
+# print(works.tail(10))
+# print()
+# print(works.info())
+# print()
+print(works.shape[0])
+print()
+# print((works.gender == 'Мужской').sum())
+# print()
+# print(works[works.gender == 'Женский'].shape[0])
+# print()
+# print((works['skills'].notna()).sum())
+# print()
+# print(works.info)
+# print()
+# print(works['skills'].count())
+# print()
+# print(works[works['skills'].notna()]['skills'])
+print(works['skills'].dropna())
