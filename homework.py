@@ -24,7 +24,6 @@ def get_top(size, data, search_field, return_field, word_to_search):
         .head(size)
 
 
-
 works = pd.read_csv("works.csv").dropna()
 not_matches_count = non_matches("jobTitle", "qualification", works)
 managers = get_top(5, works, "jobTitle", "qualification", "менеджер")
