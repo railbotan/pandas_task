@@ -4,12 +4,14 @@ import matplotlib.pyplot as plt
 
 works = pd.read_csv("./works.csv")
 
-m = works[works['gender'] == 'Мужской']['salary'].values
-fm = works[works['gender'] == 'Женский']['salary'].values
-#print(m.values)
-m_pcs = np.percentile(m, [x / 100.0 for x in range(100)])
-print(m_pcs[50])
-# ax = plt.subplots()[1]
-# ax.plot(m_pcs)
-#
-# plt.show()
+m = works[works['gender'] == 'Мужской']['salary']
+fm = works[works['gender'] == 'Женский']['salary']
+pr = [i / 10 for i in range(1, 11)]
+
+ax = plt.subplots()[1]
+print("Мужчины:\n")
+ax.plot(m.quantile(pr))
+plt.show()
+print("Женщины:\n")
+ax.plot(fm.quantile(pr))
+plt.show()
